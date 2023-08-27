@@ -1,0 +1,13 @@
+.movies-header {
+    display: flex;
+}
+
+.logo {
+    margin-left: 150px;
+    margin-top: 20px;
+    width: 130px;
+}
+
+.title {
+    margin-top: 100px;
+}

@@ -1,0 +1,17 @@
+.movie-image {
+    border-radius: 20px;
+    width: 350px
+}
+
+.movie-list-container {
+    display: flex;
+    ;
+}
+
+.movie-data {
+    margin-left: 20px;
+}
+
+.link-back {
+    margin-left: 430px;
+}

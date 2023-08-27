@@ -1,0 +1,43 @@
+/* Movie.css */
+.movie-item {
+    display: flex;
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Movie poster image */
+  .movie-poster {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+
+.movie-details {
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  flex-grow: 1; /* Allow the details section to grow and take available space */
+}
+
+.movie-details h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.movie-details b {
+  font-size: 18px;
+}
+
+.movie-details p {
+  margin: 5px 0; /* Add some spacing between paragraphs */
+}
+
+.like-button {
+  align-self: flex-start; /* Align the button to the top within the details section */
+  margin-top: auto; /* Push the button to the bottom of the details section */
+}

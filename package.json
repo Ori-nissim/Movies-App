@@ -1,0 +1,14 @@
+{
+  "name": "movies-app",
+  "version": "1.0.0",
+  "description": "A Web application that displays movies from a 3rd party API and allows user to save liked movies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-router-dom": "^6.15.0"
+  }
+}
