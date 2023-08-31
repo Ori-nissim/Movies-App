@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'; // Import useParams from react-rou
 import "./MovieDetail.css";
 import { Link } from 'react-router-dom';
 
-function MovieDetail() {
+export default function MovieDetail() {
     const { id } = useParams(); // Retrieve movie ID from URL using useParams
     const [movie, setMovie] = useState({});
     const apiUrl = `http://localhost:5000/api/movie-details/${id}`;
@@ -14,7 +14,7 @@ function MovieDetail() {
             .then(response => response.json()) // Parse the response as JSON and returns a JS object
             .then(data => setMovie(data)) // Set movies state with the response data
             .catch(error => console.error('Error fetching movies:', error));
-    },); // The empty dependency array ensures this effect runs once after the initial render
+    }, []); // The empty dependency array ensures this effect runs once after the initial render
 
 
     return (
@@ -36,4 +36,3 @@ function MovieDetail() {
 
 }
 
-export default MovieDetail;

@@ -1,19 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Import Route and Routes from react-router-dom
-import MovieList from './components/MovieList/MovieList';
-import MovieDetails from './components/MovieDetail/MovieDetail';
-import Header from './components/Header/Header';
+import { BrowserRouter ,Route, Routes} from 'react-router-dom'; // Import Route and Routes from react-router-dom
+import NavigationBar from './components/NavigationBar/NavigationBar';
 import './App.css';
+import MovieList from './components/movie-list/movie-list.component';
+import MovieDetail from './components/MovieDetail/MovieDetail';
 
 function App() {
   return (
     <div className="app-container">
-      <Header />
       <BrowserRouter>
+        <NavigationBar></NavigationBar>
         <Routes>
-          <Route path="/" element={<MovieList />} />
-          <Route path="/movies/:id" element={<MovieDetails />} />
-        </Routes>
+                <Route path="/" element={<MovieList />} />
+                <Route path="/movies/:id" element={<MovieDetail />} />
+            </Routes>
       </BrowserRouter>
     </div>
   );

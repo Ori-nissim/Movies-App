@@ -1,24 +1,31 @@
-import React from 'react';
+import React  from 'react';
 import './Movie.css'
-import { Link } from 'react-router-dom';
-
-function Movie({ movie }) {
-  const { title, release_date, poster_path, vote_average, overview} = movie;
+import { Link,useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+export default function Movie({ movie }) {
+  const { title, release_date, poster_path, vote_average, overview } = movie;
 
   const imageUrl = `https://image.tmdb.org/t/p/w185${poster_path}`;
 
+  const navigate = useNavigate();
+
+  const showMovieDetails = (id) => {
+    navigate(`/movies/${id}`)
+  };
+
   return (
-    <div className="movie-item">
-    <img src={imageUrl} alt={title} className="movie-poster" />
-    <div className="movie-details">
-      <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-      <p>{overview}</p>
-      <p>{vote_average}/10</p>
-      <p>Released In {release_date}</p>
-      <button className="like-button">Like</button>
-    </div>
-  </div>
+    <Card onClick={() => showMovieDetails(movie.id)} style={{ width: '18rem', flex: '1' }}>
+      <Card.Img variant="top" src={imageUrl} />
+      <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>
+          {overview}
+        </Card.Text>
+        <span style={{ flex: '1' }}></span>
+        <Button style={{ width: '30%' }} variant="primary">Like</Button>
+      </Card.Body>
+    </Card>
   );
 }
 
-export default Movie;

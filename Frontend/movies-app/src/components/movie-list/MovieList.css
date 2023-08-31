@@ -1,0 +1,25 @@
+.movie-list-background {
+  background-color: #f0f0f0;
+
+}
+
+.movie-list-container {
+    width: 80%; /* Set to 70% of the screen width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+  }
+  
+  /* Movie list title */
+  .movie-list-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .movie-list-container li {
+    margin-bottom: 20px;
+    list-style-type: none;
+
+  }
+  
+  

@@ -1,4 +1,35 @@
-.app-container {
-    background-color: #f0f0f0;
-    margin-top: 0px;
-}
+/* Set a background image for the entire page */
+.background-image {
+    background-image: url('https://media.istockphoto.com/id/1295114854/photo/empty-red-armchairs-of-a-theater-ready-for-a-show.webp?b=1&s=170667a&w=0&k=20&c=W__8iZMDp4XtPAMPRuTPPYzszc1A4fdajYGn0ox9kG4=');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background behind content */
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    background-color: #333; /* Choose your desired background color */
+    color: #fff; /* Choose your desired text color */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Place the navbar above content */
+  }
+  
+  .navbar a {
+    color: #fff; /* Choose your desired link color */
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
