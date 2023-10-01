@@ -2,7 +2,10 @@
   background-color: #f0f0f0;
 
 }
-
+.title {
+  margin-left: 15%;
+  padding-top: 5%;
+}
 .movie-list-container {
     width: 80%; /* Set to 70% of the screen width */
     margin: 0 auto; /* Center the container horizontally */
