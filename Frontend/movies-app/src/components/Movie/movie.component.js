@@ -1,5 +1,5 @@
 import React  from 'react';
-import './Movie.css'
+import './movie.css'
 import { Link,useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -20,7 +20,7 @@ export default function Movie({ movie }) {
       <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
-          {overview}
+          {overview.length < 150 ? overview: overview.substr(0,150) + "..." }
         </Card.Text>
         <span style={{ flex: '1' }}></span>
         <Button style={{ width: '30%' }} variant="primary">Like</Button>

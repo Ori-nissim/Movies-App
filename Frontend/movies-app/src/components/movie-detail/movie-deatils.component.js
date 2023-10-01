@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; // Import useParams from react-router-dom
-import "./MovieDetail.css";
+import "./movie-details.css";
 import { Link } from 'react-router-dom';
 
 export default function MovieDetail() {
